@@ -14,6 +14,10 @@ gem 'bootsnap', '>= 1.1.0', require: false
 # making cross-origin AJAX possible
 # gem 'rack-cors'
 
+gem 'graphql', '~> 1.8.0.pre10'
+gem 'graphql-preload', '~> 1.0', '>= 1.0.4'
+gem 'graphql-batch', '~> 0.3.9'
+
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 
