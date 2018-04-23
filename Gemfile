@@ -10,6 +10,9 @@ gem 'puma', '~> 3.11'
 
 gem 'bootsnap', '>= 1.1.0', require: false
 
+gem 'bcrypt', '~> 3.1', '>= 3.1.11'
+gem 'json_web_token', '~> 0.3.5'
+
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS),
 # making cross-origin AJAX possible
 # gem 'rack-cors'
@@ -30,6 +33,7 @@ group :development do
   
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'spring-commands-rspec'
 end
 
 group :test do
