@@ -12,19 +12,19 @@
 
 1. Fork the respository and clone your fork
 
-> git clone https://github.com/<YOUR_USERNAME>/vanhack-backend
-> cd vanhack-backend
-> bundle install
+    $ git clone https://github.com/<YOUR_USERNAME>/vanhack-backend
+    $ cd vanhack-backend
+    $ bundle install
 
 2. Setup your database
 
-> bin/rails db:create
-> bin/rails db:migrate
-> bin/rails db:seed
+    $ bin/rails db:create
+    $ bin/rails db:migrate
+    $ bin/rails db:seed
 
 ### Run tests
 
-> bin/rspec
+    $ bin/rspec
 
 
 Use GraphiQL.app to test the API

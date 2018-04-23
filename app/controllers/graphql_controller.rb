@@ -5,7 +5,7 @@ class GraphqlController < ApplicationController
     operation_name = params[:operationName]
     context = {
       # Query context goes here, for example:
-      # current_user: current_user,
+      current_user: current_user,
     }
     result = VanhackBackendSchema.execute(query, variables: variables, context: context, operation_name: operation_name)
     render json: result
@@ -29,5 +29,15 @@ class GraphqlController < ApplicationController
     else
       raise ArgumentError, "Unexpected parameter: #{ambiguous_param}"
     end
+  end
+
+  def current_user
+    return nil if request.headers['Authorization'].blank?
+
+    token = request.headers['Authorization'].split(' ').last
+    return nil if token.blank?
+
+    user_id = AuthToken.verify(token)
+    User.find_by(id: user_id)
   end
 end
