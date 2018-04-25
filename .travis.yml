@@ -1,25 +1,29 @@
 language: ruby
 rvm:
-  - 2.5.1
-
+- 2.5.1
 services:
-  - postgresql
-
+- postgresql
 addons:
-  postgresql: "10"
+  postgresql: '10'
   apt:
     packages:
-      - postgresql-10
-      - postgresql-client-10
+    - postgresql-10
+    - postgresql-client-10
 env:
   global:
   - PGPORT=5433
-
 before_install:
-  - gem update --system
-  - gem install bundler
-
-bundler_args: --without development
-
+- gem update --system
+- gem install bundler
+bundler_args: "--without development"
 before_script:
-  - bundle exec rake db:create db:migrate
+- bundle exec rake db:create db:migrate
+deploy:
+  provider: heroku
+  api_key:
+    secure: M1//VFbc0kACDAmSGPEIc1ApE+1tPMR61F7aLql6fyp6luxzZkwDm2wt6+2iWyl9fiiv2SPI9WATjePJmJcKX+nSDkunuuMxKUptxDKVne7mWY/B9czT6NhjiP+UmRYWjKwe45+3QB/Rc/jvMAOgYImKczYsZHNJcFlBI34N3nGXrz6Q4y3Wtx8COzJmNEKYKcqAB+8Va2kAG3T71zoXmt27atshTau+mPDVyjYiocA6VhJXHRV0Ej83pvyfs9HMaoi+RkjGeCiSAKhMp73Ym41Dd1YghpexrAo+8cNUbdfjreH+YoW8zqzRjNGTKFqHItdhOkomJNUfxk4klCYkU52vDu9A+NP8dhN1y/BqhgcgRmga+FLzBpYOfPpLoSRrXVieqI/iYvR+088yaSx8t6deb72GO7InXUz9vbY5BgP6nmWxZGhOeHtM0jw+uQqLBIqXKnfIjxHJRudn0Qu1k7V2Ai+dy+iPW7p46LWvPEdH92BXWtIKtRH0oafErEvRpjLis37XgiE3BLiy5pkL/K9p4VtlR/hBkupTWl2z4HvoKUy2Qa9JtHyKNC8bHv3Q0Xi4M8qpOAUhrMlu7np6mcvPKXAQVnrlvQvPCco7h2cQfQUW5/6cdT1JGj0rSo77/eslmMvC5dHWX2QxALvG4pAX+WJdl/LFl91ZOxyjZx4=
+  app: vanhack-backend
+  run:
+    - "bin/rails db:migrate"
+    - "bin/rails db:seed"
+    - restart
