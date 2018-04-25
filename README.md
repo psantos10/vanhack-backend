@@ -2,38 +2,37 @@
 
 [![Build Status](https://www.travis-ci.org/psantos10/vanhack-backend.svg?branch=master)](https://www.travis-ci.org/psantos10/vanhack-backend)
 
+DEMO: https://vanhack-backend.herokuapp.com/
+
 ![VanHack Domain Model](docs/images/vanhack-domain-model.png)
 
 ## Requirements
 
 * Ruby 2.5.1
-
 * Rails 5.2.0
-
 * PostgreSQL 10.3
 
 ## Setup
 
 1. Fork the respository and clone your fork
 
-    $ git clone https://github.com/<YOUR_USERNAME>/vanhack-backend
+    > $ git clone https://github.com/<YOUR_USERNAME>/vanhack-backend
 
-    $ cd vanhack-backend
+    > $ cd vanhack-backend
 
-    $ bundle install
+    > $ bundle install
 
 2. Setup your database
 
-    $ bin/rails db:create
+    > $ bin/rails db:create
 
-    $ bin/rails db:migrate
+    > $ bin/rails db:migrate
 
-    $ bin/rails db:seed
+    > $ bin/rails db:seed
 
 ### Run tests
 
-    $ bin/rspec
-
+    > $ bin/rspec
 
 Use GraphiQL.app to test the API
 - https://github.com/skevy/graphiql-app
