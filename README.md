@@ -1,5 +1,7 @@
 # VanHack Platform - Backend
 
+![VanHack Domain Model](docs/images/vanhack-domain-model.png)
+
 ## Requirements
 
 * Ruby 2.5.1
@@ -12,15 +14,15 @@
 
 1. Fork the respository and clone your fork
 
-    $ git clone https://github.com/<YOUR_USERNAME>/vanhack-backend
-    $ cd vanhack-backend
-    $ bundle install
+    $ git clone https://github.com/<YOUR_USERNAME>/vanhack-backend<br>
+    $ cd vanhack-backend<br>
+    $ bundle install<br>
 
 2. Setup your database
 
-    $ bin/rails db:create
-    $ bin/rails db:migrate
-    $ bin/rails db:seed
+    $ bin/rails db:create<br>
+    $ bin/rails db:migrate<br>
+    $ bin/rails db:seed<br>
 
 ### Run tests
 
