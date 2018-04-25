@@ -1,6 +1,8 @@
 # VanHack Platform - Backend
 
 [![Build Status](https://www.travis-ci.org/psantos10/vanhack-backend.svg?branch=master)](https://www.travis-ci.org/psantos10/vanhack-backend)
+[![Dependency Status](https://gemnasium.com/badges/github.com/psantos10/vanhack-backend.svg)](https://gemnasium.com/github.com/psantos10/vanhack-backend)
+[![Maintainability](https://api.codeclimate.com/v1/badges/f5e5a258acded2e4ee7b/maintainability)](https://codeclimate.com/github/psantos10/vanhack-backend/maintainability)
 
 DEMO: https://vanhack-backend.herokuapp.com/
 
@@ -16,23 +18,25 @@ DEMO: https://vanhack-backend.herokuapp.com/
 
 1. Fork the respository and clone your fork
 
-    > $ git clone https://github.com/<YOUR_USERNAME>/vanhack-backend
-
-    > $ cd vanhack-backend
-
-    > $ bundle install
+```console
+$ git clone https://github.com/<YOUR_USERNAME>/vanhack-backend
+$ cd vanhack-backend
+$ bundle install
+```
 
 2. Setup your database
 
-    > $ bin/rails db:create
-
-    > $ bin/rails db:migrate
-
-    > $ bin/rails db:seed
+```console
+$ bin/rails db:create
+$ bin/rails db:migrate
+$ bin/rails db:seed
+```
 
 ### Run tests
 
-    > $ bin/rspec
+```console
+$ bin/rspec
+```
 
 Use GraphiQL.app to test the API
 - https://github.com/skevy/graphiql-app
