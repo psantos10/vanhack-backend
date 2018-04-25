@@ -9,7 +9,7 @@ addons:
   postgresql: "10"
   apt:
     packages:
-      - postgresqk-10
+      - postgresql-10
       - postgresql-client-10
 
 before_install:
