@@ -1,5 +1,7 @@
 # VanHack Platform - Backend
 
+[![Build Status](https://www.travis-ci.org/psantos10/vanhack-backend.svg?branch=master)](https://www.travis-ci.org/psantos10/vanhack-backend)
+
 ![VanHack Domain Model](docs/images/vanhack-domain-model.png)
 
 ## Requirements
@@ -14,15 +16,19 @@
 
 1. Fork the respository and clone your fork
 
-    $ git clone https://github.com/<YOUR_USERNAME>/vanhack-backend<br>
-    $ cd vanhack-backend<br>
-    $ bundle install<br>
+    $ git clone https://github.com/<YOUR_USERNAME>/vanhack-backend
+
+    $ cd vanhack-backend
+
+    $ bundle install
 
 2. Setup your database
 
-    $ bin/rails db:create<br>
-    $ bin/rails db:migrate<br>
-    $ bin/rails db:seed<br>
+    $ bin/rails db:create
+
+    $ bin/rails db:migrate
+
+    $ bin/rails db:seed
 
 ### Run tests
 
