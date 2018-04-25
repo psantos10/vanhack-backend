@@ -1,11 +1,25 @@
 language: ruby
-sudo: false
+rvm:
+  - 2.5.1
+
+services:
+  - postgresql
+
+addons:
+  postgresql: "10"
+  apt:
+    packages:
+      - postgresql-10
+      - postgresql-client-10
+env:
+  global:
+  - PGPORT=5433
 
 before_install:
   - gem update --system
-  - gem --version
+  - gem install bundler
 
 bundler_args: --without development
 
-rvm:
-  - 2.5.1
+before_script:
+  - bundle exec rake db:create db:migrate
